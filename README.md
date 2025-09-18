@@ -68,7 +68,7 @@
 **用法**:
 ```bash
 # 使用可执行文件
-.pdf2md_v1.0.0 search "your query" [OPTIONS]
+./pdf2md_v1.0.0 search "your query" [OPTIONS]
 
 # 从源码运行
 python main.py search "your query" [OPTIONS]
@@ -82,7 +82,7 @@ python main.py search "your query" [OPTIONS]
 **示例**:
 ```bash
 # 搜索关于 "deep learning" 的50篇论文，并将ID保存到 AIDD_ids.txt
-.pdf2md_v1.0.0 search "deep learning" --size 50 --output "dl_ids.txt"
+./pdf2md_v1.0.0 search "deep learning" --size 50 --output "dl_ids.txt"
 ```
 ### 4.2. `download`: 下载 PDF
 
@@ -91,7 +91,7 @@ python main.py search "your query" [OPTIONS]
 **用法**:
 ```bash
 # 使用可执行文件
-.pdf2md_v1.0.0 download [OPTIONS]
+./pdf2md_v1.0.0 download [OPTIONS]
 
 # 从源码运行
 python main.py download [OPTIONS]
@@ -104,7 +104,7 @@ python main.py download [OPTIONS]
 **示例**:
 ```bash
 # 读取 AIDD_ids.txt 文件，并将下载的PDF保存在 data/arxiv_papers 目录下
-.pdf2md_v1.0.0 download --input-file "dl_ids.txt" --output-dir "data/arxiv_papers"
+./pdf2md_v1.0.0 download --input-file "dl_ids.txt" --output-dir "data/arxiv_papers"
 ```
 ### 4.3. `convert`: 转换 PDF 为 Markdown
 
@@ -113,7 +113,7 @@ python main.py download [OPTIONS]
 **用法**:
 ```bash
 # 使用可执行文件
-.pdf2md_v1.0.0 convert [OPTIONS]
+./pdf2md_v1.0.0 convert [OPTIONS]
 
 # 从源码运行
 python main.py convert [OPTIONS]
@@ -126,7 +126,7 @@ python main.py convert [OPTIONS]
 **示例**:
 ```bash
 # 转换 data/arxiv_papers 目录下的所有PDF，并输出到 data/markdown_files 目录
-.pdf2md_v1.0.0 convert --input-dir "data/arxiv_papers" --output-dir "data/markdown_files"
+./pdf2md_v1.0.0 convert --input-dir "data/arxiv_papers" --output-dir "data/markdown_files"
 ```
 
 ## 5. MinerU 接口说明​
