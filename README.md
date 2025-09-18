@@ -81,7 +81,7 @@ python main.py search "your query" [OPTIONS]
 
 **示例**:
 ```bash
-# 搜索关于 "deep learning" 的50篇论文，并将ID保存到 AIDD_ids.txt
+# 搜索关于 "deep learning" 的50篇论文，并将ID保存到 dl_ids.txt
 ./pdf2md_v1.0.0 search "deep learning" --size 50 --output "dl_ids.txt"
 ```
 ### 4.2. `download`: 下载 PDF
@@ -103,7 +103,7 @@ python main.py download [OPTIONS]
 
 **示例**:
 ```bash
-# 读取 AIDD_ids.txt 文件，并将下载的PDF保存在 data/arxiv_papers 目录下
+# 读取 dl_ids.txt 文件，并将下载的PDF保存在 data/arxiv_papers 目录下
 ./pdf2md_v1.0.0 download --input-file "dl_ids.txt" --output-dir "data/arxiv_papers"
 ```
 ### 4.3. `convert`: 转换 PDF 为 Markdown
