@@ -23,16 +23,16 @@ PDF2MD_MinerU 是一个命令行工具，旨在帮助用户高效地从 [arXiv](
 
 这是最简单的方式，无需关心 Python 环境和依赖安装。
 
-1.  **找到程序**: 可执行文件 `main` 位于项目根目录的 `dist` 文件夹下。
+1.  **下载程序**: 从 [GitHub Releases 页面](https://github.com/wangzhuoya/PDF2MD_MinerU/releases/download/v1.0.0/pdf2md_v1.0.0)下载最新的可执行文件 `pdf2md_v1.0.0`。
 
-2.  **授予权限**: 首次使用时，需要给该文件添加可执行权限。
+2.  **授予权限**: 下载后，需要给该文件添加可执行权限。
     ```bash
-    chmod +x dist/main
+    chmod +x pdf2md_v1.0.0
     ```
 
-3.  **运行命令**: 使用 `./dist/main` 代替 `python main.py` 来执行所有操作。例如，查看帮助信息：
+3.  **运行命令**: 使用 `./pdf2md_v1.0.0` 来执行所有操作。例如，查看帮助信息：
     ```bash
-    ./dist/main --help
+    ./pdf2md_v1.0.0 --help
     ```
 ### 方式二：从源代码运行 (适合开发者)
 
