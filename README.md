@@ -1,12 +1,17 @@
 # PDF2MD_MinerU
-Transform PDF into Mardown with MinerU.
 
+
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white" alt="Python Version">
+  <a href="https://github.com/wangzhuoya/PDF2MD_MinerU/blob/main/LICENSE"><img src="https://img.shields.io/github/license/wangzhuoya/PDF2MD_MinerU" alt="License"></a>
+  <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/Data%20Source-arXiv-B31B1B" alt="arXiv"></a>
+  <a href="https://mineru.net/"><img src="https://img.shields.io/badge/API%20Provider-MinerU-orange" alt="MinerU"></a>
+</p>
 
 ## 1. 项目简介
-
-PDF2MD_MinerU 是一个命令行工具，旨在帮助用户高效地从 [arXiv](https://arxiv.org/) 网站批量搜索、下载论文，并利用 [MinerU](https://mineru.net/) API 将这些 PDF 文件转换为 Markdown 格式。
-
-通过将繁琐的流程自动化，本工具可以极大地提升研究人员和学生处理大量学术文献的效率。
+**PDF2MD_MinerU** 是一个命令行工具，旨在帮助用户高效地从 [arXiv](https://arxiv.org/) 网站批量搜索、下载论文，并利用 [MinerU](https://mineru.net/) API 将这些 PDF 文件转换为 Markdown 格式。
+本项目中PDF→Markdown格式的转化基于[OpenDataLab](https://github.com/opendatalab)开发的[MinerU](https://github.com/opendatalab/MinerU/tree/master)，需要预先申请[MinerU API Token](https://mineru.net/apiManage/token)。
 
 ## 2. 功能特性
 
@@ -44,7 +49,7 @@ PDF2MD_MinerU 是一个命令行工具，旨在帮助用户高效地从 [arXiv](
     ```
 
 2.  **配置API Token**:
-    - 在项目根目录 (`/home/wang2go/Code/PDF2MD_MinerU/`) 下创建一个名为 `.env` 的文件。
+    - 在项目根目录 (`~/PDF2MD_MinerU/`) 下创建一个名为 `.env` 的文件。
     - 在该文件中添加您的 MinerU API Token，格式如下：
       ```
       MINERU_API_TOKEN="your_actual_api_token"
@@ -63,7 +68,7 @@ PDF2MD_MinerU 是一个命令行工具，旨在帮助用户高效地从 [arXiv](
 **用法**:
 ```bash
 # 使用可执行文件
-./dist/main search "your query" [OPTIONS]
+.pdf2md_v1.0.0 search "your query" [OPTIONS]
 
 # 从源码运行
 python main.py search "your query" [OPTIONS]
@@ -77,7 +82,7 @@ python main.py search "your query" [OPTIONS]
 **示例**:
 ```bash
 # 搜索关于 "deep learning" 的50篇论文，并将ID保存到 AIDD_ids.txt
-./dist/main search "deep learning" --size 50 --output "AIDD_ids.txt"
+.pdf2md_v1.0.0 search "deep learning" --size 50 --output "dl_ids.txt"
 ```
 ### 4.2. `download`: 下载 PDF
 
@@ -86,7 +91,7 @@ python main.py search "your query" [OPTIONS]
 **用法**:
 ```bash
 # 使用可执行文件
-./dist/main download [OPTIONS]
+.pdf2md_v1.0.0 download [OPTIONS]
 
 # 从源码运行
 python main.py download [OPTIONS]
@@ -99,7 +104,7 @@ python main.py download [OPTIONS]
 **示例**:
 ```bash
 # 读取 AIDD_ids.txt 文件，并将下载的PDF保存在 data/arxiv_papers 目录下
-./dist/main download --input-file "AIDD_ids.txt" --output-dir "data/arxiv_papers"
+.pdf2md_v1.0.0 download --input-file "dl_ids.txt" --output-dir "data/arxiv_papers"
 ```
 ### 4.3. `convert`: 转换 PDF 为 Markdown
 
@@ -108,7 +113,7 @@ python main.py download [OPTIONS]
 **用法**:
 ```bash
 # 使用可执行文件
-./dist/main convert [OPTIONS]
+.pdf2md_v1.0.0 convert [OPTIONS]
 
 # 从源码运行
 python main.py convert [OPTIONS]
@@ -121,7 +126,14 @@ python main.py convert [OPTIONS]
 **示例**:
 ```bash
 # 转换 data/arxiv_papers 目录下的所有PDF，并输出到 data/markdown_files 目录
-./dist/main convert --input-dir "data/arxiv_papers" --output-dir "data/markdown_files"
+.pdf2md_v1.0.0 convert --input-dir "data/arxiv_papers" --output-dir "data/markdown_files"
 ```
 
+## 5. MinerU 接口说明​
 
+MinerU API用户须先申请 Token，且有以下限制：
+- 单个文件大小不能超过 **200MB**,文件页数不超出 **600 页**
+- 每个账号每天享有 **2000 页**最高优先级解析额度，超过 2000 页的部分优先级降低
+- 因网络限制，github、aws 等国外 URL 会请求超时
+  
+详情请见[MinerU API文档](https://mineru.net/apiManage/docs)。
