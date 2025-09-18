@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environments
+.venv/
+env/
+venv/
+
+# Build and distribution
+build/
+dist/
+*.egg-info/
+*.spec
+
+# Secrets
+.env
+
+# Data files
+data/
+*.txt
+
+# OS-specific
+.DS_Store
+
+# IDE-specific
+.idea/
+.vscode/
