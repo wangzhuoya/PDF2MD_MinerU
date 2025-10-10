@@ -9,7 +9,7 @@
   <a href="https://mineru.net/"><img src="https://img.shields.io/badge/API%20Provider-MinerU-orange" alt="MinerU"></a>
 </p>
 
-## 1. 项目简介
+## 1. PDF2MD_MinerU简介
 **PDF2MD_MinerU** 是一个命令行工具，旨在帮助用户高效地从 [arXiv](https://arxiv.org/) 网站批量搜索、下载论文，并利用 [MinerU](https://mineru.net/) API 将这些 PDF 文件转换为 Markdown 格式。
 本项目中PDF→Markdown格式的转化基于[OpenDataLab](https://github.com/opendatalab)开发的[MinerU](https://github.com/opendatalab/MinerU/tree/master)，需要预先申请[MinerU API Token](https://mineru.net/apiManage/token)。
 
