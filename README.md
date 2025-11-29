@@ -10,19 +10,19 @@
 </p>
 
 ## 1. PDF2MD_MinerU简介
-**PDF2MD_MinerU** 是一个命令行工具，旨在帮助用户高效地从 [arXiv](https://arxiv.org/) 网站批量搜索、下载论文，并利用 [MinerU](https://mineru.net/) API 将这些 PDF 文件转换为 Markdown 格式。
+**PDF2MD_MinerU** 是一个命令行工具，可以高效地从 [arXiv](https://arxiv.org/) 网站批量搜索、下载论文，并利用 [MinerU](https://mineru.net/) API 将 PDF/Word/XLS/PPT 文件转换为 Markdown 格式。
 本项目中PDF→Markdown格式的转化基于[OpenDataLab](https://github.com/opendatalab)开发的[MinerU](https://github.com/opendatalab/MinerU/tree/master)，需要预先申请[MinerU API Token](https://mineru.net/apiManage/token)。
 
 ## 2. 功能特性
 
-- **论文搜索**: 根据关键词在 arXiv 上搜索相关论文，并提取论文 ID。
+- **论文搜索**: 根据关键词在arXiv上搜索相关论文，并提取论文 ID。
 - **批量下载**: 根据论文 ID 列表，自动、批量地下载对应的 PDF 全文。
 - **格式转换**: 调用 MinerU API，将下载好的 PDF 文件批量转换为 Markdown 文件。
 
 
 ## 3. 如何使用
 
-您有两种方式使用本工具：直接运行可执行文件（推荐），或从源代码运行。
+两种方式使用本工具：直接运行可执行文件（推荐），或从源代码运行。
 ### 方式一：直接运行可执行文件 (Linux only)
 
 这是最简单的方式，无需关心 Python 环境和依赖安装。
@@ -74,7 +74,7 @@ python main.py search "your query" [OPTIONS]
 ```
 
 **参数**:
-- `query` (必需): 您要搜索的关键词，如果包含空格，请用引号括起来。
+- `query` (必需): 搜索的关键词，如果包含空格，请用引号括起来。
 - `--size` (可选): 希望获取的论文数量。**注意**: arXiv 接受的有效值为 `25`, `50`, `100`, `200`。如果提供无效值，程序将自动使用默认值 `50`。
 - `--output` (可选): 保存论文 ID 的文件名。默认为 `arxiv_ids.txt`。
 
