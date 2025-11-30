@@ -27,7 +27,7 @@
 
 这是最简单的方式，无需关心 Python 环境和依赖安装。
 
-1.  **下载程序**: 从 [GitHub Releases 页面](https://github.com/wangzhuoya/PDF2MD_MinerU/releases/download/v1.0.0/pdf2md_v1.0.0)下载最新的可执行文件 `pdf2md_v1.0.0`。
+1.  **下载程序**: 从 [GitHub Releases](https://github.com/wangzhuoya/PDF2MD_MinerU/releases/download/v1.0.0/pdf2md_v1.0.0)下载最新的可执行文件 `pdf2md_v1.0.0`。
 
 2.  **授予权限**: 下载后，需要给该文件添加可执行权限。
     ```bash
@@ -53,9 +53,9 @@
       ```
       MINERU_API_TOKEN="your_actual_api_token"
       ```
-    > **重要**: 请将 `your_actual_api_token` 替换为您自己的真实 Token。
+    > **重要**: 请将 `your_actual_api_token` 替换为MinerU的API Token。
 
-3.  **运行命令**: 使用 `python main.py` 来执行操作。
+3.  **运行命令**: 使用 `python main.py` 执行操作。
 ## 4. 命令详解
 
 本工具包含三个子命令：`search`, `download`, `convert`。
